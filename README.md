@@ -480,29 +480,29 @@ Receipts data contain lists init which will be a diffent table having forign key
 
 
 
-def create_table(records, headers, file_path):
-	# Take a list of records and headers and generate csv from it
-	
-    f = open(file_path, 'w', encoding='utf-8')
-    row_len = len(headers)
-    f.write(format_list(headers, row_len, ',', '\"'))
+		def create_table(records, headers, file_path):
+			# Take a list of records and headers and generate csv from it
 
-    for record in records:
-        f.write(format_list(record, row_len, ',', '\"'))
-    f.close()
-    print('CSV file successfully created: {}'.format(file_path))
+		    f = open(file_path, 'w', encoding='utf-8')
+		    row_len = len(headers)
+		    f.write(format_list(headers, row_len, ',', '\"'))
+
+		    for record in records:
+			f.write(format_list(record, row_len, ',', '\"'))
+		    f.close()
+		    print('CSV file successfully created: {}'.format(file_path))
 
 
-def format_list(list, length, delimiter, quote):
-    counter = 1
-    string = ""
-    for record in list:
-        if counter == length:
-            string += quote + str(record) + quote + '\n'
-        else:
-            string += quote + str(record) + quote + delimiter
-        counter += 1
-    return string
+		def format_list(list, length, delimiter, quote):
+		    counter = 1
+		    string = ""
+		    for record in list:
+			if counter == length:
+			    string += quote + str(record) + quote + '\n'
+			else:
+			    string += quote + str(record) + quote + delimiter
+			counter += 1
+		    return string
 
 
 
