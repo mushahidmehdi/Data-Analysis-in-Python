@@ -294,6 +294,18 @@ We have three different json data.
 
                 if __name__ == "__main__":
                     main()
+		    
+		    
+	fetchreward=# CREATE TABLE brands(
+	id VARCHAR(100) PRIMARY KEY,
+	barcode VARCHAR(100),
+	category VARCHAR(100),
+	categorycode VARCHAR(100),
+	cpg_id VARCHAR(1000),
+	cpg_ref VARCHAR(100),
+	name VARCHAR(100),
+	topbrand VARCHAR(100));
+
                     
 ![brands-database](https://user-images.githubusercontent.com/66418035/122211818-d1d61900-ceaf-11eb-9bf3-70bf5712c21e.png)
 
@@ -517,7 +529,25 @@ Receipts data contain lists init which will be a diffent table having forign key
 			    string += quote + str(record) + quote + delimiter
 			counter += 1
 		    return string
+		    
 
+###### Create receipts Table 
+		fetchreward=# CREATE TABLE receipts(
+			id VARCHAR(100) PRIMARY KEY,
+			bonuspointsearned VARCHAR(100),
+			bonuspointsearnedreason VARCHAR(100),
+			createdate_date VARCHAR(100),
+			datescanned_date VARCHAR(1000),
+			finisheddate_date VARCHAR(100),
+			modifydate_date VARCHAR(100),
+			pointsawardeddate_date VARCHAR(100),
+			pointsearned VARCHAR(100),
+			purchasedate_date VARCHAR(100),
+			purchaseditemcount VARCHAR(1000),
+			rewardsreceiptstatus VARCHAR(100),
+			totalspent VARCHAR(100),
+			userid VARCHAR(100));
+			);
 
 
 ###### Load data into postgres database
