@@ -152,7 +152,8 @@ We have three different json data.
         if __name__ == "__main__":
             main()
             
-            
+ ![user-database](https://user-images.githubusercontent.com/66418035/122211755-bff47600-ceaf-11eb-9c89-9694ec29c0d5.png)
+
             
 ### 2- brands.json
 
@@ -282,6 +283,7 @@ We have three different json data.
                 if __name__ == "__main__":
                     main()
                     
+![brands-database](https://user-images.githubusercontent.com/66418035/122211818-d1d61900-ceaf-11eb-9bf3-70bf5712c21e.png)
 
 
 ### 3- receipts.json 
@@ -551,6 +553,7 @@ Receipts data contain lists init which will be a diffent table having forign key
                 if __name__ == "__main__":
                     main()
 
+![receipts-database](https://user-images.githubusercontent.com/66418035/122211850-dbf81780-ceaf-11eb-9e0f-12fac20623d7.png)
 
 
 
