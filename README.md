@@ -151,8 +151,98 @@ We have three different json data.
 
         if __name__ == "__main__":
             main()
+            
+            
+            
+### 1- brands.json
+
+![brands-json](https://user-images.githubusercontent.com/66418035/122209582-5a9f8580-cead-11eb-984f-a57ffd2c1490.png)
 
 
+                import psycopg2
+                import json
+
+                def create_user(brands):
+
+                        records = []
+                        headers = ['id', 'barcode', 'category', 'categorycode', 'cpg_id', 'cpg_ref', 'name', 'topbrand']
+
+                        for brand in brands:
+                                list = []
+                                try:
+                                        list.append(str(brand['_id']['$oid']))
+                                except KeyError:
+                                        list.append(str(None))
+
+                                try:
+                                        list.append(str(brand['barcode']))
+                                except KeyError:
+                                        list.append(str(None))
+
+                                try:
+                                        list.append(str(brand['category']))
+                                except KeyError:
+                                        list.append(str(None))
+
+                                try:
+                                        list.append(str(brand['categoryCode']))
+                                except KeyError:
+                                        list.append(str(None))
+
+                                try:
+                                        list.append(str(brand['cpg']['$id']['$oid']))
+                                except KeyError:
+                                        list.append(str(None))
+
+                                try:
+                                        list.append(str(brand['cpg']['$ref']))
+
+                                except KeyError:
+                                        list.append(str(None))
+
+                                try:
+                                        list.append(str(brand['name']))
+                                except KeyError:
+                                        list.append(str(None))
+
+                                try:
+                                        list.append(str(brand['topBrand']))
+                                except KeyError:
+                                        list.append(str(None))
+
+                                records.append(list)
+
+                        print('Receipts Table Prepared')
+                        return records, headers
+
+
+
+                def create_table(records, headers, file_path):
+                        with open('brands.csv', 'w', encoding='utf-8') as f:
+                                row_length = len(headers)
+                                f.write(format_list(headers, row_length, ',', '\"'))
+
+                                for record in records:
+                                        f.write(format_list(record, row_length, ',', '\"'))
+
+                        print('CSV file successfully created: {}'.format(file_path))
+
+
+                def format_list(list, length, delimiter, quote):
+                        counter = 1
+                        strings = ''
+
+                        for record in list:
+                                if counter == length:
+                                        strings += quote + record + quote + '\n'
+
+                                else:
+                                        strings += quote + record + quote + delimiter
+                                counter += 1
+                        return strings
+
+
+![brands-csv](https://user-images.githubusercontent.com/66418035/122209772-93d7f580-cead-11eb-8a1f-02b954541771.png)
 
 
 
