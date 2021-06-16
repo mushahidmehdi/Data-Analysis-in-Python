@@ -151,6 +151,18 @@ We have three different json data.
 
         if __name__ == "__main__":
             main()
+
+###### Creating User Table 
+
+		fetchreward=# CREATE TABLE users(
+		id VARCHAR(100) PRIMARY KEY,
+		active VARCHAR(100),
+		createddate VARCHAR(100),
+		lastlogin VARCHAR(100),
+		role VARCHAR(1000),
+		signupscore VARCHAR(100),
+		state VARCHAR(100));
+
             
  ![user-database](https://user-images.githubusercontent.com/66418035/122211755-bff47600-ceaf-11eb-9c89-9694ec29c0d5.png)
 
