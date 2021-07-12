@@ -3,7 +3,6 @@
 ![GitHub Pipenv locked Python version (branch)](https://img.shields.io/github/pipenv/locked/python-version/mushahidmehdi/Full-Stack-Web-Application/main)
 ![GitHub commit merge status](https://img.shields.io/github/commit-status/mushahidmehdi/Full-Stack-Web-Application/main/c49a9cf916c11d163b7b4d1256b89c211793d6ee)
 ![GitHub repo size](https://img.shields.io/github/repo-size/mushahidmehdi/JSON-Data-Analysis-in-Python)
-https://img.shields.io/steam/favorites/100?style=plastic)
 
 # JSON-Data-Analysis-in-Python  
 
